@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>Veggie Recipies!</title>
-  </head>
+    <meta name="description" content="A simple paste made with oil and spices can be rubbed on tofu two days in advance. The paste's robust spices are especially good on tofu!">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/home/younis/Projects/HTML/css_workflow.css" type="text/css">
+    <script type="text/javascript" src="/home/younis/Projects/HTML/external_javascript_example.js"/></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-12345678-9', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
   <body>
     <header>
       <img src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/2005/s300/logo-emblem-red-1000-1-.jpg" alt="app Academy" />
@@ -18,11 +30,10 @@
       </nav>
     </header>
 
-    <h2>Spiced-Tofu Sandwich</h2>
     <aside>
 
       <h2 id="Ingredients">Ingredients</h2>
-      <ul>
+      <ul class="ingredients-list">
         <li>2 tbsp. coriander seeds</li>
         <li>1½ tsp. fennel seeds</li>
         <li>1 tsp. whole black peppercorns</li>
@@ -45,23 +56,20 @@
 
     </aside>
     <section>
+        <h1>Spiced-Tofu Sandwich</h1>
+
+        <figure>
+    <img src="http://4.bp.blogspot.com/-UTvJBhecMjI/UgGoy9Xe94I/AAAAAAAAzis/KKB9jWHhUOg/s1600/7-29-vegan_8127tofu-peanut-sub_edited-1peanut-tofu-sandwich.jpg" alt="Spicy Tofu Sandwich!" />
+
+          <figcaption>
+            <a href="https://en.wikipedia.org/wiki/Tofu">More about tofu!</a>
+          </figcaption>
+         </figure>
 
 
     <h2 id="Description">Description</h2>
 
     <p>A simple paste made with oil and spices can be rubbed on tofu two days in advance. The paste's robust spices are especially good on tofu!</p>
-
-
-
-    <figure>
-    <img src="http://4.bp.blogspot.com/-UTvJBhecMjI/UgGoy9Xe94I/AAAAAAAAzis/KKB9jWHhUOg/s1600/7-29-vegan_8127tofu-peanut-sub_edited-1peanut-tofu-sandwich.jpg" alt="Spicy Tofu Sandwich!" />
-    </figure>
-
-    <figcaption>
-      <a href="https://en.wikipedia.org/wiki/Tofu">More about tofu!</a>
-    </figcaption>
-
-
 
 
     <h2 id="Directions">Directions</h2>
@@ -77,19 +85,22 @@
     </ol>
     </section>
 
-    <section>
-      <form class="" action="/reviews" method="post">
-        <label for="Name">Name</label>
-        <input id="name" type="text">
+    <section id="reviews">
+      <h2>Reviews</h2>
+
+      <form class="" action="/reviews" method="post" id="review-form">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
+
         <label for="rating">Rating</label>
-          1<input type="Radio" name="rating" value="1">
+          1<input type="radio" name="rating" value="1" checked>
           2<input type="radio" name="rating" value="2">
           3<input type="radio" name="rating" value="3">
           4<input type="radio" name="rating" value="4">
           5<input type="radio" name="rating" value="5">
 
         <label for="expertise">Cooking Expertise</label>
-        <select class="expertise" name="expertise">
+        <select id="expertise" name="expertise">
           <option value="Select Cooking Expertise" disabled="true" selected="true">Select Cooking Experise</option>
 
           <option value="Sometimes Cook">Sometimes Cook</option>
@@ -103,14 +114,16 @@
         </select>
 
         <label>Review
-          <textarea name="review" rows="1" cols="20"></textarea>
+          <textarea id="review" name="review" rows="10" cols="30"></textarea>
         </label>
+
+        <input type="submit" value="Submit Review">
       </form>
     </section>
 
 
     <footer>
-      Original Recipe by GRACE PARISI   at http://www.delish.com/cooking/recipe-ideas/recipes/a19352/spiced-tofu-sandwiches-recipe-fw0612/
+      Original Recipe by GRACE PARISI
     </footer>
 
   </body>
